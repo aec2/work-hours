@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "electron": "^25.1.1",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2"
+  },
+  "name": "work-hours",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "build:css": "tailwind build src/tailwind.css -o tailwind-output.css",
+    "start": "electron .",
+    "bs":"npm run build:css && npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

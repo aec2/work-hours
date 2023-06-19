@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="tailwind-output.css" rel="stylesheet">
+    <style>
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .spinner {
+            animation: spin 1s linear infinite;
+            border: 4px solid #ededed;
+            border-left-color: #3498db;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center h-screen bg-gray-50">
+    <img src="src\assets\tei-logo.png" alt="Company Logo" class="w-32 mx-auto mb-4">
+    <div class="spinner w-8 h-8 mb-4"></div>
+    <h1 class="text-lg font-semibold text-blue-600">Loading...</h1>
+</body>
+</html>

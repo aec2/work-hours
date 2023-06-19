@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="tailwind-output.css" rel="stylesheet">
+  <style>
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .animate-spin-slow {
+    animation: spin 10s linear infinite;
+  }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="container bg-white p-8 rounded-lg shadow-md text-center">
+    <div class="clock-container flex justify-center items-center w-16 h-16 mb-4 mx-auto">
+        <svg class="clock-face animate-spin-slow mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <circle class="path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" cx="12" cy="12" r="10"></circle>
+            <path class="hand hour-hand" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v2"></path>
+            <path class="hand minute-hand" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16v4"></path>
+        </svg>
+    </div>
+    <label for="entryTime" class="block text-lg font-medium text-gray-700 mb-2">Enter your arrival time (24hr format - HH:MM):</label>
+    <input id="entryTime" type="time" min="07:30" max="09:30" class="border border-gray-300 p-2 rounded-lg mb-4"/>
+
+    <label id="remainingTime" class="block text-xl font-semibold text-blue-500">Remaining time: --:--</label>
+    <label id="exitTime" class="block text-xl font-semibold text-blue-500">Exit time: --:--</label>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
